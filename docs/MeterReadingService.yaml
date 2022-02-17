@@ -1,0 +1,93 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  /register:
+    post:
+      tags:
+        - account-registration-controller
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /meter-reading/{meterId}:
+    post:
+      tags:
+        - meter-reading-controller
+      operationId: store
+      parameters:
+        - name: meterId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reading'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /cost-usage/meters/{meterId}:
+    get:
+      tags:
+        - usage-cost-controller
+      operationId: get
+      parameters:
+        - name: meterId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: days
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: number
+                format: double
+components:
+  schemas:
+    RegistrationRequest:
+      type: object
+      properties:
+        smartMeterId:
+          type: string
+        pricePlan:
+          type: string
+    Reading:
+      type: object
+      properties:
+        reading:
+          type: number
+          format: double
+        time:
+          type: string
+          format: date-time
