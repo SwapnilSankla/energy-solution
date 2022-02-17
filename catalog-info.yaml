@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: meter-reading-service
+  title: Meter Reading Service # optional, human readable component name
+  description: |
+    A service for providing the meter readings to the user
+spec:
+  type: service
+  owner: swapnil-sankla
+  lifecycle: production
