@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: influxdb
+  labels:
+    type: influxdb
+spec:
+  containers:
+    - name: influxdb
+      image: influxdb:2.0
+      imagePullPolicy: Never
+      env:
+        - name: DOCKER_INFLUXDB_INIT_MODE
+          value: setup
+        - name: DOCKER_INFLUXDB_INIT_USERNAME
+          value: admin
+        - name: DOCKER_INFLUXDB_INIT_PASSWORD
+          value: admin12345
+        - name: DOCKER_INFLUXDB_INIT_ORG
+          value: swapnil-sankla
+        - name: DOCKER_INFLUXDB_INIT_BUCKET
+          value: my-bucket
+        - name: DOCKER_INFLUXDB_INIT_RETENTION
+          value: 1w
+        - name: DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+          value: my-token
+      ports:
+        - containerPort: 8086
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb
+spec:
+  selector:
+    type: influxdb
+  type: NodePort
+  ports:
+    - port: 8086
+      targetPort: 8086
+      nodePort: 30003
+      protocol: TCP

@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    database: mysql
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    url: jdbc:mysql://192.168.59.100:30002/db
+    username: root
+    password: ${SQL_PASSWORD}
+    driver-class-name: com.mysql.jdbc.Driver
+  influx:
+    url: http://192.168.59.100:30003
+    bucket: my-bucket
+    token: my-token
+    org: swapnil-sankla
+
