@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Meter Reading REST API
+  description: Meter Reading REST API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: swapnil-sankla
+  definition:
+    $text: https://github.com/SwapnilSankla/energy-solution/blob/master/docs/MeterReadingService.yaml
