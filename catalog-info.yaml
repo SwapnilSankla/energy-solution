@@ -5,7 +5,7 @@ metadata:
   title: Meter Reading Service # optional, human readable component name
   description: A service for providing the meter readings to the user
   annotations:
-    backstage.io/techdocs-ref: value
+    backstage.io/techdocs-ref: https://github.com/SwapnilSankla/energy-solution/blob/master/README.md
 spec:
   type: service
   owner: swapnil-sankla
