@@ -3,8 +3,9 @@ kind: Component
 metadata:
   name: meter-reading-service
   title: Meter Reading Service # optional, human readable component name
-  description: |
-    A service for providing the meter readings to the user
+  description: A service for providing the meter readings to the user
+  annotations:
+    backstage.io/techdocs-ref: value
 spec:
   type: service
   owner: swapnil-sankla
