@@ -10,3 +10,5 @@ spec:
   type: service
   owner: swapnil-sankla
   lifecycle: production
+  providesApis:
+    - meter-reading-api
