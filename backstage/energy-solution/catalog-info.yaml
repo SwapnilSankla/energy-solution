@@ -1,12 +1,21 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: energy-solution
-  description: An example of a Backstage application.
+  name: meter-reading-service
+  title: Meter Reading Service # optional, human readable component name
+  description: A service for providing the meter readings to the user
+  tags:
+    - kotlin
+  links:
+    - url: https://swapnilsankla.me/about/
+      title: About author
+      icon: dashboard
   annotations:
-    backstage.io/kubernetes-id: energy-solution
-    github.com/project-slug: SwapnilSankla/energy-solution
+    backstage.io/techdocs-ref: url:https://swapnilsankla.github.io/energy-solution/
 spec:
-  type: website
-  owner: john@example.com
-  lifecycle: experimental
+  type: service
+  owner: swapnil-sankla
+  lifecycle: production
+  system: energy-solution
+  providesApis:
+    - meter-reading-api
