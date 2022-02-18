@@ -5,7 +5,7 @@ metadata:
   title: Meter Reading Service # optional, human readable component name
   description: A service for providing the meter readings to the user
   tags:
-    - Kotlin
+    - kotlin
   links:
     - url: https://swapnilsankla.me/about/
       title: About author
