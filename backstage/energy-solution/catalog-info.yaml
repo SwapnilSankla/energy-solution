@@ -5,6 +5,7 @@ metadata:
   description: An example of a Backstage application.
   annotations:
     backstage.io/kubernetes-id: energy-solution
+    github.com/project-slug: SwapnilSankla/energy-solution
 spec:
   type: website
   owner: john@example.com
