@@ -12,6 +12,8 @@ metadata:
       icon: dashboard
   annotations:
     backstage.io/techdocs-ref: url:https://swapnilsankla.github.io/energy-solution/
+    backstage.io/kubernetes-id: energy-solution
+    github.com/project-slug: SwapnilSankla/energy-solution
 spec:
   type: service
   owner: swapnil-sankla
