@@ -11,7 +11,7 @@ metadata:
       title: About author
       icon: dashboard
   annotations:
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://swapnilsankla.github.io/energy-solution/
 spec:
   type: service
   owner: swapnil-sankla
