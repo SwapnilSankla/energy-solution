@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: Meter Reading REST API
+  name: meter-reading-api
   description: Meter Reading REST API
 spec:
   type: openapi
