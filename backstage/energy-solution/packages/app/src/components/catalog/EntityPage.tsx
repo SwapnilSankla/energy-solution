@@ -67,6 +67,9 @@ import {
   RELATION_PART_OF,
   RELATION_PROVIDES_API,
 } from '@backstage/catalog-model';
+import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
+import { EntityGithubInsightsContent } from '@roadiehq/backstage-plugin-github-insights';
+
 
 const cicdContent = (
   // This is an example of how you can implement your company's logic in entity page.
@@ -169,6 +172,16 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/docs" title="Docs">
       <EntityTechdocsContent />
     </EntityLayout.Route>
+
+      <EntityLayout.Route path="/kubernetes" title="Kubernetes">
+          <EntityKubernetesContent />
+      </EntityLayout.Route>
+
+      <EntityLayout.Route
+          path="/code-insights"
+          title="Code Insights">
+          <EntityGithubInsightsContent />
+      </EntityLayout.Route>
   </EntityLayout>
 );
 

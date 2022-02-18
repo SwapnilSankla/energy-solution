@@ -3,7 +3,8 @@ kind: Pod
 metadata:
  name: grafana
  labels:
-  type: grafana
+   type: grafana
+   'backstage.io/kubernetes-id': energy-solution
 spec:
  containers:
  - name: grafana

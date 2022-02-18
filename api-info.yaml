@@ -7,5 +7,6 @@ spec:
   type: openapi
   lifecycle: production
   owner: swapnil-sankla
+  system: energy-solution
   definition:
     $text: https://github.com/SwapnilSankla/energy-solution/blob/master/docs/MeterReadingService.yaml

@@ -4,6 +4,7 @@ metadata:
   name: influxdb
   labels:
     type: influxdb
+    'backstage.io/kubernetes-id': energy-solution
 spec:
   containers:
     - name: influxdb
