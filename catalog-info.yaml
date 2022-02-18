@@ -4,11 +4,18 @@ metadata:
   name: meter-reading-service
   title: Meter Reading Service # optional, human readable component name
   description: A service for providing the meter readings to the user
+  tags:
+    - Kotlin
+  links:
+    - url: https://swapnilsankla.me/about/
+      title: About author
+      icon: dashboard
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: swapnil-sankla
   lifecycle: production
+  system: energy-solution
   providesApis:
     - meter-reading-api
