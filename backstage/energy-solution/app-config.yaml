@@ -121,4 +121,4 @@ kubernetes:
           name: minikube
           authProvider: serviceAccount
           skipTLSVerify: true
-          skipMetricsLookup: false
+          skipMetricsLookup: true
