@@ -117,9 +117,8 @@ kubernetes:
   clusterLocatorMethods:
     - type: 'config'
       clusters:
-        - url: https://192.168.59.101:8443
+        - url: http://localhost:8080
           name: minikube
-          authProvider: 'serviceAccount'
+          authProvider: serviceAccount
           skipTLSVerify: true
-          skipMetricsLookup: true
-          serviceAccountToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjEtall1Mlp3LU84cEsxOVpEUXV4NU1tT0pPMnpia245TUttSFNmcmpBZmcifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4teHZmNWMiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjA0NmQyMWY5LTAwMTctNGNmNC1iZmNlLTNkNThiYjYxMWQyNSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.IHSMmW9_-eYjRQeszbuHElli6A6VJoHLJ0Rj-5EQaZyz3XPhCId8FM4eU8Gk6jTTTYREbsMGeDAmUljhv58Tl8m6ienlpyTojh8kqIjjpSUiw9IxnD6pw9RqGVjMY1O-SIn3sl0s39Jtgg0gxi-SqjFtFvfok7K9zMUVrj_RyzYd-wWMkBZsI_a8TE2_mmn9b3Ro6AMhw_AkJ91wPwV7xjI4KX3OzXGjvrL1KL2_JQKR0hufcPybGW_s8klBViD5lcdkG7qDIz6acNCANvY-FkpRsZRrZKwXaSVD-YwKfFBx2iOykfJC4MdNwNqbeDzj71smV_ktM5l8QIFeXXICXg'
+          skipMetricsLookup: false

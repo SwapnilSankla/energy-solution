@@ -4,6 +4,7 @@
 - ✅ Setup Dbeaver
 - ✅ setup Influx DB
 - ✅ Ability to store the readings
+- ✅ Integrate backstage with support of tech docs, k8s
 - 🕐 Integration test with Influx DB test container
 - 🕐 Cron job to call store readings every 50 ms
 - 🕐 Store all secrets in hashicorp vault
@@ -24,7 +25,7 @@
 - Create table using `/scripts/account-ddl.sql`
 
 #### Application usage:
-###### Registration:
+##### Registration:
 Use command below to register to new meter with some plan.
 ``` 
 curl 'http://localhost:8080/register' \
@@ -33,3 +34,10 @@ curl 'http://localhost:8080/register' \
 --data-raw '{"smartMeterId":"1","pricePlan": "plan123"}' \
 --compressed
 ```
+
+##### Steps to run backstage locally:
+Below are the steps to start the backstage application
+1. Run `yarn install` inside folder `energy-solution/backstage/energy-solution/packages/app`
+2. Run `yarn install` inside folder `energy-solution/backstage/energy-solution/packages/backend`
+3. Run `kubectl proxy --port 8080`. This is required as k8s is throwing 403 when connecting to cluster using service account. This needs to be fixed properly.
+4. Run `AUTH_GITHUB_CLIENT_ID={} AUTH_GITHUB_CLIENT_SECRET={} yarn dev`. Set client id and secret prior running this command.
