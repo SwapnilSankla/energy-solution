@@ -14,6 +14,7 @@ metadata:
     backstage.io/techdocs-ref: url:https://swapnilsankla.github.io/energy-solution/
     backstage.io/kubernetes-id: energy-solution
     github.com/project-slug: SwapnilSankla/energy-solution
+    backstage.io/source-location: url:https://github.com/SwapnilSankla/energy-solution/
 spec:
   type: service
   owner: swapnil-sankla
