@@ -70,7 +70,7 @@ import {
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 import { EntityGithubInsightsContent } from '@roadiehq/backstage-plugin-github-insights';
 import { EntityTodoContent } from '@backstage/plugin-todo';
-
+import { EntitySecurityInsightsContent } from '@roadiehq/backstage-plugin-security-insights';
 
 const cicdContent = (
   // This is an example of how you can implement your company's logic in entity page.
@@ -186,6 +186,12 @@ const serviceEntityPage = (
 
       <EntityLayout.Route path="/todo" title="Todo">
           <EntityTodoContent />
+      </EntityLayout.Route>
+
+      <EntityLayout.Route
+          path="/security-insights"
+          title="Security Insights">
+          <EntitySecurityInsightsContent />
       </EntityLayout.Route>
   </EntityLayout>
 );
