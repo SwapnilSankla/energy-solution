@@ -20,6 +20,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres
+  labels:
+    'backstage.io/kubernetes-id': energy-solution
 spec:
   selector:
     type: postgres
