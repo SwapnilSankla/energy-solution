@@ -159,20 +159,6 @@ const serviceEntityPage = (
       </Grid>
     </EntityLayout.Route>
 
-    <EntityLayout.Route path="/dependencies" title="Dependencies">
-      <Grid container spacing={3} alignItems="stretch">
-        <Grid item md={6}>
-          <EntityDependsOnComponentsCard variant="gridItem" />
-        </Grid>
-        <Grid item md={6}>
-          <EntityDependsOnResourcesCard variant="gridItem" />
-        </Grid>
-      </Grid>
-    </EntityLayout.Route>
-
-    <EntityLayout.Route path="/docs" title="Docs">
-      <EntityTechdocsContent />
-    </EntityLayout.Route>
 
       <EntityLayout.Route path="/kubernetes" title="Kubernetes">
           <EntityKubernetesContent />
