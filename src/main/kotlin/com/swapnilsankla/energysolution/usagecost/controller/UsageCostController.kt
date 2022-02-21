@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 class UsageCostController(val usageCostService: UsageCostService) {
     @GetMapping("/meters/{meterId}")
     fun get(@PathVariable meterId: String, @RequestParam days: Int): ResponseEntity<Double> {
-        //TODO: Controller advice
+        // TODO: Controller advice
         return try {
             ResponseEntity.ok(usageCostService.cost(meterId))
         } catch(e: PricePlanNotAttachedToMeterException) {

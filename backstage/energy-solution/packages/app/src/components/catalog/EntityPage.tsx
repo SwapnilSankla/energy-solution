@@ -69,6 +69,7 @@ import {
 } from '@backstage/catalog-model';
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 import { EntityGithubInsightsContent } from '@roadiehq/backstage-plugin-github-insights';
+import { EntityTodoContent } from '@backstage/plugin-todo';
 
 
 const cicdContent = (
@@ -181,6 +182,10 @@ const serviceEntityPage = (
           path="/code-insights"
           title="Code Insights">
           <EntityGithubInsightsContent />
+      </EntityLayout.Route>
+
+      <EntityLayout.Route path="/todo" title="Todo">
+          <EntityTodoContent />
       </EntityLayout.Route>
   </EntityLayout>
 );
